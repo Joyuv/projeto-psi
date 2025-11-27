@@ -15,7 +15,7 @@ def init_env(path = "../.env"):
         variables = ""
         variables += 'DATABASE = "sqlite:///database.db"\n'
         variables += f'SECRET_KEY = "{token_hex()}"\n'
-        variables += 'BACKEND_URL = "localhost:5000"'
+        variables += 'BACKEND_URL = "http://localhost:5000"'
                 
         with open(path, "w") as env:
             env.write(variables)
