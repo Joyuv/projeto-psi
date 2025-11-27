@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 export default async function cadastroAction(data: { username:string; email: string; password: string; }) {
     const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
-    const url = `${apiUrl}/cadastro`;
+    const url = `${apiUrl}/api/cadastro`;
     const options = {
         method: "POST",
         headers: {"Content-Type": "application/json"},
