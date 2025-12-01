@@ -1,10 +1,14 @@
 from datetime import datetime
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import Text, DateTime, ForeignKey
+from typing import TYPE_CHECKING
+
 from backend.extensions import db
-from backend.models.foto import ProvaContestacao
-from backend.models.reclamacao import Reclamacao
-from backend.models.user import User
+
+if TYPE_CHECKING:
+    from .foto import ProvaContestacao
+    from .reclamacao import Reclamacao
+    from .user import User
 
 
 class Contestacao(db.Model):

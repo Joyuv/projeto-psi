@@ -1,9 +1,12 @@
 from datetime import datetime
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import String, DateTime, ForeignKey
+from typing import TYPE_CHECKING
 from backend.extensions import db
-from backend.models.contestacao import Contestacao
-from backend.models.reclamacao import Reclamacao
+
+if TYPE_CHECKING:
+    from .contestacao import Contestacao
+    from .reclamacao import Reclamacao
 
 
 class FotoReclamacao(db.Model):

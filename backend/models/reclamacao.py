@@ -1,11 +1,14 @@
+import enum
 from datetime import datetime
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import String, Text, DateTime, ForeignKey, Enum
+from typing import TYPE_CHECKING
 from backend.extensions import db
-import enum
 
-from backend.models import contestacao, foto
-from backend.models.user import User
+if TYPE_CHECKING:
+    from .contestacao import Contestacao
+    from .foto import FotoReclamacao
+    from .user import User
 
 
 class StatusReclamacao(enum.Enum):
@@ -46,13 +49,13 @@ class Reclamacao(db.Model):
         nullable=False
     )
     
-    contestacoes: Mapped[list["contestacao"]] = relationship( # type: ignore
+    contestacoes: Mapped[list["Contestacao"]] = relationship( # type: ignore
         "Contestacao",
         back_populates="reclamacao",
         cascade="all, delete-orphan"
     )
     
-    fotos: Mapped[list["foto"]] = relationship( # type: ignore
+    fotos: Mapped[list["FotoReclamacao"]] = relationship( # type: ignore
         "FotoReclamacao",
         back_populates="reclamacao",
         cascade="all, delete-orphan"
