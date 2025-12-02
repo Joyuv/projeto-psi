@@ -13,6 +13,9 @@ def register():
     email = request.json.get("email")
     password = request.json.get("password")
 
+    if not username or not email or not password:
+        return jsonify({"message": "Preencha todos os campos do formulário"}), 400
+
     user = User.query.filter_by(email=email).first()
     if user:
         return jsonify({"message": "Este email já está cadastrado"}), 400
@@ -31,6 +34,9 @@ def register():
 def login():
     email = request.json.get("email")
     password = request.json.get("password")
+
+    if not email or not password:
+        return jsonify({"message": "Preencha todos os campos do formulário"}), 400
 
     user = User.query.filter_by(email=email).first()
     if not user or not check_password_hash(user.password_hash, password):
