@@ -1,7 +1,7 @@
+import shutil
 from flask import Blueprint, jsonify, request
 from flask_login import login_required, current_user
 from werkzeug.utils import secure_filename
-from os import getenv
 from backend.models import StatusReclamacao, Reclamacao, FotoReclamacao
 from backend.extensions import db
 from backend.utils import (
@@ -27,7 +27,7 @@ def get_reclamacao(reclamacao_id):
 @reclamacoes_bp.route('/reclamacao/adicionar', methods=["POST"])
 @login_required
 def add_reclamacao():
-    dados = request.json
+    dados = request.form
     arquivos = request.files
     # obrigatorios
     titulo = dados.get("titulo")
@@ -53,24 +53,32 @@ def add_reclamacao():
         # longitude=longitude
     )
 
-
-    imagens = arquivos.getlist("fotos")
-    path = criar_e_obter_diretorio_reclamacao(reclamacao)
-
-    fotos_reclamacao = []
-    for img in imagens:
-        filename = salvar_imagem(path, img)
-        url = f"/api/uploads/reclamacoes/{reclamacao.id}/{filename}"
-        foto_reclamacao = FotoReclamacao(url=url, nome_arquivo=filename)
-
+    # A RECLAMAÇÃO É CRIADA MESMO QUE OCORRA ERRO AO SALVAR AS FOTOS
+    # TROCAR ISSO DEPOIS?
     try:
         db.session.add(reclamacao)
         db.session.commit()
-        return jsonify({"message": "Reclamação adicionada com sucesso", "reclamacao": reclamacao.to_dict()}), 201
     except Exception as e:
         db.session.rollback()
         return jsonify({"message": f"Erro ao adicionar reclamação: {e}"}), 500
-    
+
+    imagens = arquivos.getlist("fotos")
+    path = criar_e_obter_diretorio_reclamacao(reclamacao.id)
+
+    try:
+        for img in imagens:
+            filename = salvar_imagem(path, img)
+            url = f"/api/uploads/reclamacoes/{reclamacao.id}/{filename}"
+            foto_reclamacao = FotoReclamacao(url=url, nome_arquivo=filename, reclamacao=reclamacao)
+            db.session.add(foto_reclamacao)
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        shutil.rmtree(path)
+        return jsonify({"message": f"Erro ao adicionar as fotos da reclamação: {e}"}), 500
+
+    return jsonify({"message": "Reclamação adicionada com sucesso", "reclamacao": reclamacao.to_dict()}), 201
+
 
 # LISTAGEM DE RECLAMAÇÕES
 
