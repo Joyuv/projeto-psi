@@ -48,7 +48,7 @@ export default function ListaReclamacoes({ lista }: { lista: any[] }) {
           </button>
           <button
             className={clsx("bg-gray-700 rounded p-3 cursor-pointer", {
-              invisible: reclamacao.status === "Resolvida",
+              invisible: ["Resolvida", "Contestada"].includes(reclamacao.status),
             })}
             type="button"
             onClick={async () => {
@@ -60,7 +60,7 @@ export default function ListaReclamacoes({ lista }: { lista: any[] }) {
           </button>
           <button
             className={clsx("bg-gray-700 rounded p-3 cursor-pointer", {
-              invisible: reclamacao.status === "Resolvida",
+              invisible: ["Pendente"].includes(reclamacao.status),
             })}
             type="button"
             onClick={() => {
