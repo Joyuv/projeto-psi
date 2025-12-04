@@ -14,11 +14,10 @@ export default function Page() {
     const form = e.currentTarget;
     const formData = new FormData(form);
     const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/reclamacao/${id}/contestar`;
-    const data = { id: id, motivo: formData.get("motivo") };
     const requisicao = await fetch(url, {
       method: "POST",
       credentials: "include" as RequestCredentials,
-      body: JSON.stringify(data),
+      body: formData,
     });
 
     return await requisicao.json();
