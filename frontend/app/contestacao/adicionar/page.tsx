@@ -2,8 +2,10 @@
 
 import "../../login/form.css";
 import { useSearchParams } from "next/navigation";
+import { useState } from "react";
 
 export default function Page() {
+  const [files, setFiles] = useState<File[]>([]);
   const pPesquisa = useSearchParams();
   const id = Number(pPesquisa.get("id"));
 
@@ -16,11 +18,17 @@ export default function Page() {
     const requisicao = await fetch(url, {
       method: "POST",
       credentials: "include" as RequestCredentials,
-      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
 
     return await requisicao.json();
+  }
+
+  function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    if (!e.target.files) return;
+
+    const files = Array.from(e.target.files);
+    setFiles(files);
   }
   return (
     <main className="flex justify-center">
@@ -38,6 +46,18 @@ export default function Page() {
           type="text"
           placeholder="Insira o motivo"
         />
+        <input
+          type="file"
+          name="fotos"
+          multiple
+          onChange={handleFileChange}
+          accept="image/*"
+        />
+        <ul>
+          {files.map((file, index) => (
+            <li key={index}>{file.name}</li>
+          ))}
+        </ul>
         <button type="submit" className="rounded">
           Adicionar
         </button>
