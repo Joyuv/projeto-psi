@@ -44,17 +44,24 @@ def criar_e_obter_diretorio_contestacao(contestacao_id: str | int) -> str:
 
 def salvar_imagem(path: str, arquivo: FileStorage) -> str:
     'Salva a imagem e retorna o nome do arquivo em que foi salva'
-    
+
     try:
         filename = secure_filename(arquivo.filename)
+        if not filename:
+            raise Exception("Nome do arquivo inválido")
+
+        # Obter extensão
+        _, ext = os.path.splitext(filename)
+        if not ext:
+            ext = '.jpg'  # Default
+
         filepath = os.path.join(path, filename)
-        if not filename or os.path.exists(filepath):
-            extensao = arquivo.content_type.split("/")[1]
-            filename = f"{token_hex(16)}.{extensao}" # FALTA A EXTENSÃO
+        if os.path.exists(filepath):
+            filename = f"{token_hex(16)}{ext}"
             filepath = os.path.join(path, filename)
 
         arquivo.save(filepath)
-
+        
         return filename
     except Exception as e:
         raise Exception(f"Erro ao salvar imagem: {e}")
