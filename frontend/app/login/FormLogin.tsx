@@ -6,13 +6,14 @@ import Swal from "sweetalert2";
 import { getIconByStatus } from "@/lib/utils/alerts"
 import "@/public/css/form.css";
 import Required from "@/components/ui/Required";
+import { useAuth } from "@/context/AuthContext";
 
 
 export default function LoginForm() {
   const params = useSearchParams();
   const redirect = params.get("redirect");
   const [showModal, setShowModal] = useState(true);
-
+  
   if (redirect && showModal) {
     Swal.fire(
       {
@@ -21,40 +22,41 @@ export default function LoginForm() {
         icon: "error"
       }
     );
-
+    
     setShowModal(false);
   }
-
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
-
+  const { setAuthState } = useAuth();
+  
   async function requisitarLogin(data: {
     email: string;
     password: string;
   }) {
     const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
-
+    
     const url = `${apiUrl}/api/login`;
     const options = {
-        method: "POST",
-        credentials: "include" as RequestCredentials,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+      method: "POST",
+      credentials: "include" as RequestCredentials,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
     };
     const response = await fetch(url, options);
     const json = await response.json();
-
+    
     return {
       ok: response.ok,
       status: response.status,
       data: json
     };
   }
-
+  
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setIsSubmitting(true);
-
+    
     const form = e.currentTarget;
     const formData = new FormData(form);
     const data = {
@@ -70,6 +72,7 @@ export default function LoginForm() {
         icon: getIconByStatus(response.status)
       }).then(() => {
         if (response.status === 200) {
+          setAuthState(true, response.data.usuario);
           if (redirect) {
             router.push(redirect);
           }
