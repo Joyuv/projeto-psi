@@ -26,10 +26,10 @@ export default function Page() {
     return (
       <div className="flex flex-col p-3 bg-gray-800 rounded-xl mx-[100px]">
         <h1 className="text-[20px] font-bold">{reclamacao.titulo}</h1>
-        <h3 className="text-[15px] font-bold">{reclamacao.descricao}</h3>
+        <h3 className="text-[15px] font-bold">Descrição: {reclamacao.descricao}</h3>
         <ul>
           <li>Cidade: {reclamacao.cidade}</li>
-          <li>Endreço: {reclamacao.endereco}</li>
+          <li>Endereço: {reclamacao.endereco}</li>
           <li>Status: {reclamacao.status}</li>
           <li>Autor: {reclamacao.autor}</li>
           <li>Data criada: {toLocal(reclamacao.dataCriacao)}</li>

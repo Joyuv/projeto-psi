@@ -89,6 +89,7 @@ export default function LoginForm() {
     <form
       onSubmit={onSubmit}
       className="flex flex-col gap-2 bg-gray-800 rounded-xl p-2 px-5"
+      method="post"
     >
       <label htmlFor="email">Email <Required/></label>
       <input type="text" id="email" name="email" required />
