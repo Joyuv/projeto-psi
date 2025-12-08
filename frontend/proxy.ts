@@ -23,6 +23,8 @@ export async function proxy(request: NextRequest) {
 // SÓ EXECUTA O PROXY EM ROTAS QUE REQUEREM AUTENTICAÇÃO
 export const config = {
   matcher: [
+    "/reclamacao/adicionar",
+    "/reclamacao/atualizar",
     "/usuario/:path*",
     "/logout",
   ]
