@@ -1,7 +1,10 @@
 export async function getContestacao(id: number) {
     const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
-    const response = await fetch(`${apiUrl}/api/contestacao/${id}`)
+    const response = await fetch(`${apiUrl}/api/contestacao/${id}`,
+    {
+        method: "GET"
+    });
     const data = await response.json();
 
     return({
