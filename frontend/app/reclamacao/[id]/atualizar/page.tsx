@@ -1,7 +1,9 @@
-import CardReclamacao from "./CardReclamacao";
-import getReclamacao from "./actions";
+import "@/public/css/form.css";
+import "./box.css";
 import { notFound } from "next/navigation";
-
+import getReclamacao from "../actions";
+import { FormAtualizarReclamacao } from "./FormAtualizarReclamacao";
+import DadosAtuaisReclamacao from "./DadosAtuaisReclamacao";
 
 interface PageProps {
   params: {
@@ -22,7 +24,10 @@ export default async function Page({ params }: PageProps) {
   }
   const reclamacao = response.data.reclamacao;
 
-  return (
-    <CardReclamacao reclamacao={reclamacao}/>
+  return(
+    <div className="flex align-center justify-center h-full gap-[20px]">
+      <DadosAtuaisReclamacao reclamacao={reclamacao}/>
+      <FormAtualizarReclamacao reclamacaoId={reclamacaoId}/>
+    </div>
   );
 }
