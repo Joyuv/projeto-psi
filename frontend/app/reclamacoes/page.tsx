@@ -3,10 +3,14 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 
 export default async function Page() {
-  const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/reclamacoes`;
+  const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
-  const resp = await fetch(url, { method: "GET" });
-  const data = await resp.json();
+  const response = await fetch(`${apiUrl}/api/reclamacoes`, 
+    { 
+      method: "GET" 
+    }
+  );
+  const data = await response.json();
 
   return (
     <>
