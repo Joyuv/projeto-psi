@@ -1,0 +1,239 @@
+<svg viewBox="0 0 1440 3000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo -->
+  <rect width="1440" height="3000" fill="#ffffff"/>
+  
+  <!-- Cabeçalho -->
+  <rect width="1440" height="80" fill="#22c55e"/>
+  
+  <!-- Logo e Nome -->
+  <circle cx="80" cy="40" r="25" fill="#ffffff"/>
+  <path d="M 75 30 L 80 40 L 85 30" stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="120" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff">Reclama RN</text>
+  
+  <!-- Menu -->
+  <text x="1100" y="50" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Início</text>
+  <text x="1180" y="50" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Reclamações</text>
+  <text x="1310" y="50" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Entrar</text>
+  
+  <!-- Hero Section -->
+  <rect x="0" y="80" width="1440" height="400" fill="#f0fdf4"/>
+  
+  <!-- Conteúdo Hero -->
+  <text x="720" y="200" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#166534" text-anchor="middle">
+    Sua voz importa para o RN
+  </text>
+  <text x="720" y="250" font-family="Arial, sans-serif" font-size="20" fill="#15803d" text-anchor="middle">
+    Relate problemas municipais e ajude a melhorar sua cidade
+  </text>
+  
+  <!-- Botão CTA -->
+  <rect x="570" y="290" width="300" height="60" rx="30" fill="#22c55e"/>
+  <text x="720" y="330" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Fazer uma Reclamação
+  </text>
+  
+  <!-- Estatísticas -->
+  <rect x="200" y="400" width="280" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="580" y="400" width="280" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="960" y="400" width="280" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <text x="340" y="450" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#22c55e" text-anchor="middle">2.847</text>
+  <text x="340" y="485" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Reclamações</text>
+  <text x="340" y="505" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Registradas</text>
+  
+  <text x="720" y="450" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#22c55e" text-anchor="middle">1.523</text>
+  <text x="720" y="485" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Problemas</text>
+  <text x="720" y="505" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Resolvidos</text>
+  
+  <text x="1100" y="450" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#22c55e" text-anchor="middle">167</text>
+  <text x="1100" y="485" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Municípios</text>
+  <text x="1100" y="505" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Participantes</text>
+  
+  <!-- Categorias Section -->
+  <text x="120" y="620" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#166534">
+    Categorias de Problemas
+  </text>
+  
+  <!-- Cards de Categorias -->
+  <g id="categoria1">
+    <rect x="120" y="660" width="280" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="140" y="680" width="60" height="60" rx="30" fill="#dcfce7"/>
+    <path d="M 160 700 L 180 720 L 190 705" stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="140" y="775" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#166534">Iluminação</text>
+    <text x="140" y="805" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Postes queimados,</text>
+    <text x="140" y="825" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">falta de luz pública</text>
+  </g>
+  
+  <g id="categoria2">
+    <rect x="440" y="660" width="280" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="460" y="680" width="60" height="60" rx="30" fill="#dcfce7"/>
+    <circle cx="490" cy="710" r="15" stroke="#22c55e" stroke-width="3" fill="none"/>
+    <text x="460" y="775" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#166534">Buracos</text>
+    <text x="460" y="805" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Vias danificadas,</text>
+    <text x="460" y="825" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">problemas no asfalto</text>
+  </g>
+  
+  <g id="categoria3">
+    <rect x="760" y="660" width="280" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="780" y="680" width="60" height="60" rx="30" fill="#dcfce7"/>
+    <rect x="800" y="695" width="20" height="30" fill="none" stroke="#22c55e" stroke-width="3"/>
+    <text x="780" y="775" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#166534">Lixo</text>
+    <text x="780" y="805" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Coleta irregular,</text>
+    <text x="780" y="825" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">acúmulo de resíduos</text>
+  </g>
+  
+  <g id="categoria4">
+    <rect x="1080" y="660" width="280" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="1100" y="680" width="60" height="60" rx="30" fill="#dcfce7"/>
+    <path d="M 1115 705 L 1145 705 M 1130 690 L 1130 720" stroke="#22c55e" stroke-width="3" stroke-linecap="round"/>
+    <text x="1100" y="775" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#166534">Saúde</text>
+    <text x="1100" y="805" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Postos de saúde,</text>
+    <text x="1100" y="825" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">atendimento médico</text>
+  </g>
+  
+  <!-- Reclamações Recentes -->
+  <text x="120" y="940" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#166534">
+    Reclamações Recentes
+  </text>
+  
+  <!-- Card Reclamação 1 -->
+  <rect x="120" y="980" width="1200" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="140" y="1000" width="80" height="30" rx="15" fill="#dcfce7"/>
+  <text x="180" y="1020" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#22c55e" text-anchor="middle">Iluminação</text>
+  
+  <text x="140" y="1055" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#111827">
+    Poste queimado na Av. Senador Salgado Filho
+  </text>
+  <text x="140" y="1085" font-family="Arial, sans-serif" font-size="15" fill="#6b7280">
+    Poste de iluminação pública está sem funcionar há 2 semanas, causando insegurança
+  </text>
+  <text x="140" y="1110" font-family="Arial, sans-serif" font-size="15" fill="#6b7280">
+    para moradores e pedestres no período noturno.
+  </text>
+  
+  <text x="140" y="1145" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">📍 Natal, RN • Há 2 dias</text>
+  <rect x="1180" y="1120" width="120" height="35" rx="8" fill="#22c55e"/>
+  <text x="1240" y="1143" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Em Análise</text>
+  
+  <!-- Card Reclamação 2 -->
+  <rect x="120" y="1190" width="1200" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="140" y="1210" width="80" height="30" rx="15" fill="#dcfce7"/>
+  <text x="180" y="1230" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#22c55e" text-anchor="middle">Buracos</text>
+  
+  <text x="140" y="1265" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#111827">
+    Grande buraco na Rua Mipibu prejudica o trânsito
+  </text>
+  <text x="140" y="1295" font-family="Arial, sans-serif" font-size="15" fill="#6b7280">
+    Buraco de grandes proporções na via está causando danos aos veículos e riscos
+  </text>
+  <text x="140" y="1320" font-family="Arial, sans-serif" font-size="15" fill="#6b7280">
+    aos motoristas. Situação se agrava com as chuvas.
+  </text>
+  
+  <text x="140" y="1355" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">📍 Mossoró, RN • Há 5 dias</text>
+  <rect x="1180" y="1330" width="120" height="35" rx="8" fill="#fbbf24"/>
+  <text x="1240" y="1353" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Pendente</text>
+  
+  <!-- Card Reclamação 3 -->
+  <rect x="120" y="1400" width="1200" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="140" y="1420" width="80" height="30" rx="15" fill="#dcfce7"/>
+  <text x="180" y="1440" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#22c55e" text-anchor="middle">Lixo</text>
+  
+  <text x="140" y="1475" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#111827">
+    Coleta de lixo não realizada no bairro Candelária
+  </text>
+  <text x="140" y="1505" font-family="Arial, sans-serif" font-size="15" fill="#6b7280">
+    Há mais de uma semana sem coleta de lixo, causando mau cheiro e risco de
+  </text>
+  <text x="140" y="1530" font-family="Arial, sans-serif" font-size="15" fill="#6b7280">
+    proliferação de doenças. Comunidade solicita urgência na resolução.
+  </text>
+  
+  <text x="140" y="1565" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">📍 Natal, RN • Há 1 semana</text>
+  <rect x="1180" y="1540" width="120" height="35" rx="8" fill="#10b981"/>
+  <text x="1240" y="1563" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Resolvido</text>
+  
+  <!-- Como Funciona Section -->
+  <rect x="0" y="1640" width="1440" height="500" fill="#f0fdf4"/>
+  
+  <text x="720" y="1720" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#166534" text-anchor="middle">
+    Como Funciona?
+  </text>
+  
+  <!-- Passo 1 -->
+  <circle cx="300" cy="1850" r="50" fill="#22c55e"/>
+  <text x="300" y="1865" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="300" y="1940" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#166534" text-anchor="middle">Registre</text>
+  <text x="300" y="1970" font-family="Arial, sans-serif" font-size="15" fill="#6b7280" text-anchor="middle">Descreva o problema</text>
+  <text x="300" y="1995" font-family="Arial, sans-serif" font-size="15" fill="#6b7280" text-anchor="middle">e sua localização</text>
+  
+  <!-- Seta 1 -->
+  <path d="M 360 1850 L 480 1850" stroke="#22c55e" stroke-width="3" fill="none"/>
+  <path d="M 470 1840 L 480 1850 L 470 1860" stroke="#22c55e" stroke-width="3" fill="none"/>
+  
+  <!-- Passo 2 -->
+  <circle cx="570" cy="1850" r="50" fill="#22c55e"/>
+  <text x="570" y="1865" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="570" y="1940" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#166534" text-anchor="middle">Acompanhe</text>
+  <text x="570" y="1970" font-family="Arial, sans-serif" font-size="15" fill="#6b7280" text-anchor="middle">Receba atualizações</text>
+  <text x="570" y="1995" font-family="Arial, sans-serif" font-size="15" fill="#6b7280" text-anchor="middle">sobre o andamento</text>
+  
+  <!-- Seta 2 -->
+  <path d="M 630 1850 L 750 1850" stroke="#22c55e" stroke-width="3" fill="none"/>
+  <path d="M 740 1840 L 750 1850 L 740 1860" stroke="#22c55e" stroke-width="3" fill="none"/>
+  
+  <!-- Passo 3 -->
+  <circle cx="840" cy="1850" r="50" fill="#22c55e"/>
+  <text x="840" y="1865" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="840" y="1940" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#166534" text-anchor="middle">Resolução</text>
+  <text x="840" y="1970" font-family="Arial, sans-serif" font-size="15" fill="#6b7280" text-anchor="middle">Órgão responsável</text>
+  <text x="840" y="1995" font-family="Arial, sans-serif" font-size="15" fill="#6b7280" text-anchor="middle">toma providências</text>
+  
+  <!-- Seta 3 -->
+  <path d="M 900 1850 L 1020 1850" stroke="#22c55e" stroke-width="3" fill="none"/>
+  <path d="M 1010 1840 L 1020 1850 L 1010 1860" stroke="#22c55e" stroke-width="3" fill="none"/>
+  
+  <!-- Passo 4 -->
+  <circle cx="1110" cy="1850" r="50" fill="#22c55e"/>
+  <text x="1110" y="1865" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="1110" y="1940" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#166534" text-anchor="middle">Concluído</text>
+  <text x="1110" y="1970" font-family="Arial, sans-serif" font-size="15" fill="#6b7280" text-anchor="middle">Problema resolvido</text>
+  <text x="1110" y="1995" font-family="Arial, sans-serif" font-size="15" fill="#6b7280" text-anchor="middle">e comunidade feliz!</text>
+  
+  <!-- Call to Action Final -->
+  <rect x="470" y="2070" width="500" height="70" rx="35" fill="#22c55e"/>
+  <text x="720" y="2115" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Comece Agora - É Grátis!
+  </text>
+  
+  <!-- Rodapé -->
+  <rect x="0" y="2200" width="1440" height="300" fill="#166534"/>
+  
+  <text x="120" y="2280" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff">Reclama RN</text>
+  <text x="120" y="2315" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">Melhorando o Rio Grande do Norte,</text>
+  <text x="120" y="2340" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">uma reclamação de cada vez.</text>
+  
+  <!-- Links Rodapé -->
+  <text x="500" y="2260" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Links Úteis</text>
+  <text x="500" y="2290" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">Sobre Nós</text>
+  <text x="500" y="2315" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">Como Funciona</text>
+  <text x="500" y="2340" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">Perguntas Frequentes</text>
+  <text x="500" y="2365" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">Contato</text>
+  
+  <text x="720" y="2260" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Categorias</text>
+  <text x="720" y="2290" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">Iluminação Pública</text>
+  <text x="720" y="2315" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">Buracos e Vias</text>
+  <text x="720" y="2340" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">Coleta de Lixo</text>
+  <text x="720" y="2365" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">Saúde Pública</text>
+  
+  <text x="960" y="2260" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Legal</text>
+  <text x="960" y="2290" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">Termos de Uso</text>
+  <text x="960" y="2315" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">Política de Privacidade</text>
+  <text x="960" y="2340" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">Diretrizes da Comunidade</text>
+  
+  <!-- Copyright -->
+  <line x1="120" y1="2420" x2="1320" y2="2420" stroke="#22c55e" stroke-width="1"/>
+  <text x="720" y="2460" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5" text-anchor="middle">
+    © 2024 Reclama RN. Todos os direitos reservados.
+  </text>
+</svg>
