@@ -1,0 +1,157 @@
+<svg viewBox="0 0 1200 1400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1400" fill="#f9fafb"/>
+  
+  <!-- Título -->
+  <text x="600" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#111827" text-anchor="middle">
+    5 Modelos de Logo - ReclamaRN
+  </text>
+  
+  <!-- MODELO 1 - Inspirado na Ouvidoria com ondas -->
+  <g id="modelo1">
+    <rect x="50" y="100" width="1100" height="220" rx="15" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <text x="600" y="135" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#6b7280" text-anchor="middle">
+      MODELO 1 - Ondas Sonoras
+    </text>
+    
+    <!-- Ondas verdes -->
+    <path d="M 80 200 Q 90 170 100 200" stroke="#22c55e" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 90 200 Q 105 150 120 200" stroke="#4ade80" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 100 200 Q 120 130 140 200" stroke="#86efac" stroke-width="8" fill="none" stroke-linecap="round"/>
+    
+    <!-- Círculo com mapa RN estilizado -->
+    <circle cx="180" cy="200" r="45" fill="#166534"/>
+    <text x="180" y="210" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">RN</text>
+    
+    <!-- Texto -->
+    <text x="250" y="215" font-family="'Arial Black', Arial, sans-serif" font-size="70" font-weight="900" fill="#22c55e">
+      Reclama
+    </text>
+    <text x="610" y="215" font-family="'Arial Black', Arial, sans-serif" font-size="70" font-weight="900" fill="#166534">
+      RN
+    </text>
+  </g>
+  
+  <!-- MODELO 2 - Com megafone e ondas -->
+  <g id="modelo2">
+    <rect x="50" y="350" width="1100" height="220" rx="15" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <text x="600" y="385" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#6b7280" text-anchor="middle">
+      MODELO 2 - Megafone Integrado
+    </text>
+    
+    <!-- Megafone estilizado -->
+    <circle cx="120" cy="450" r="50" fill="#22c55e"/>
+    <g transform="translate(120, 450) scale(0.6)">
+      <path d="M -15 -25 L 20 -35 L 25 -30 L 25 30 L 20 35 L -15 25 Z" fill="#ffffff"/>
+      <ellipse cx="25" cy="0" rx="8" ry="32" fill="#ffffff"/>
+    </g>
+    
+    <!-- Ondas saindo -->
+    <path d="M 175 435 Q 195 430 205 435 Q 215 440 225 435" stroke="#4ade80" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 175 450 Q 200 445 220 450 Q 240 455 260 450" stroke="#4ade80" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 175 465 Q 195 470 205 465 Q 215 460 225 465" stroke="#4ade80" stroke-width="6" fill="none" stroke-linecap="round"/>
+    
+    <!-- Texto -->
+    <text x="290" y="465" font-family="'Arial Black', Arial, sans-serif" font-size="70" font-weight="900" fill="#22c55e">
+      Reclama
+    </text>
+    <text x="650" y="465" font-family="'Arial Black', Arial, sans-serif" font-size="70" font-weight="900" fill="#166534">
+      RN
+    </text>
+  </g>
+  
+  <!-- MODELO 3 - Estilo Minimalista com arcos -->
+  <g id="modelo3">
+    <rect x="50" y="600" width="1100" height="220" rx="15" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <text x="600" y="635" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#6b7280" text-anchor="middle">
+      MODELO 3 - Arcos Minimalistas
+    </text>
+    
+    <!-- Arcos concêntricos -->
+    <path d="M 80 710 A 60 60 0 0 1 200 710" stroke="#22c55e" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M 90 710 A 50 50 0 0 1 190 710" stroke="#4ade80" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 100 710 A 40 40 0 0 1 180 710" stroke="#86efac" stroke-width="6" fill="none" stroke-linecap="round"/>
+    
+    <!-- Ponto central -->
+    <circle cx="140" cy="710" r="15" fill="#166534"/>
+    
+    <!-- Texto -->
+    <text x="230" y="715" font-family="'Arial Black', Arial, sans-serif" font-size="70" font-weight="900" fill="#22c55e">
+      Reclama
+    </text>
+    <text x="590" y="715" font-family="'Arial Black', Arial, sans-serif" font-size="70" font-weight="900" fill="#166534">
+      RN
+    </text>
+  </g>
+  
+  <!-- MODELO 4 - Com escudo/brasão estilizado -->
+  <g id="modelo4">
+    <rect x="50" y="850" width="1100" height="220" rx="15" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <text x="600" y="885" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#6b7280" text-anchor="middle">
+      MODELO 4 - Escudo Governamental
+    </text>
+    
+    <!-- Escudo estilizado -->
+    <path d="M 120 900 L 80 920 L 80 950 Q 80 985 120 1000 Q 160 985 160 950 L 160 920 Z" fill="#22c55e"/>
+    <path d="M 120 920 L 95 932 L 95 950 Q 95 975 120 985 Q 145 975 145 950 L 145 932 Z" fill="#ffffff"/>
+    <text x="120" y="960" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#22c55e" text-anchor="middle">RN</text>
+    
+    <!-- Estrelas ao redor -->
+    <path d="M 70 905 L 72 910 L 68 910 Z" fill="#fbbf24"/>
+    <path d="M 170 905 L 172 910 L 168 910 Z" fill="#fbbf24"/>
+    
+    <!-- Texto -->
+    <text x="190" y="965" font-family="'Arial Black', Arial, sans-serif" font-size="70" font-weight="900" fill="#22c55e">
+      Reclama
+    </text>
+    <text x="550" y="965" font-family="'Arial Black', Arial, sans-serif" font-size="70" font-weight="900" fill="#166534">
+      RN
+    </text>
+  </g>
+  
+  <!-- MODELO 5 - Com balão de fala (reclamação) -->
+  <g id="modelo5">
+    <rect x="50" y="1100" width="1100" height="220" rx="15" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <text x="600" y="1135" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#6b7280" text-anchor="middle">
+      MODELO 5 - Balão de Reclamação
+    </text>
+    
+    <!-- Balão de fala -->
+    <ellipse cx="130" cy="1200" rx="55" ry="45" fill="#22c55e"/>
+    <path d="M 100 1230 L 85 1250 L 110 1235" fill="#22c55e"/>
+    
+    <!-- Linhas de texto no balão -->
+    <line x1="100" y1="1190" x2="160" y2="1190" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+    <line x1="100" y1="1200" x2="160" y2="1200" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+    <line x1="100" y1="1210" x2="145" y2="1210" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+    
+    <!-- Ondas -->
+    <path d="M 190 1185 Q 210 1180 220 1185" stroke="#4ade80" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M 190 1200 Q 215 1195 230 1200" stroke="#4ade80" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M 190 1215 Q 210 1220 220 1215" stroke="#4ade80" stroke-width="5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Texto -->
+    <text x="260" y="1215" font-family="'Arial Black', Arial, sans-serif" font-size="70" font-weight="900" fill="#22c55e">
+      Reclama
+    </text>
+    <text x="620" y="1215" font-family="'Arial Black', Arial, sans-serif" font-size="70" font-weight="900" fill="#166534">
+      RN
+    </text>
+  </g>
+  
+  <!-- Legendas dos conceitos -->
+  <text x="100" y="295" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">
+    Conceito: Ondas de comunicação chegando ao estado RN
+  </text>
+  <text x="100" y="545" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">
+    Conceito: Amplificando a voz dos cidadãos
+  </text>
+  <text x="100" y="795" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">
+    Conceito: Conexão direta e eficiente
+  </text>
+  <text x="100" y="1045" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">
+    Conceito: Serviço oficial e confiável
+  </text>
+  <text x="100" y="1295" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">
+    Conceito: Espaço para reclamações e denúncias
+  </text>
+</svg>
