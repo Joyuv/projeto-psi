@@ -1,9 +1,10 @@
 "use client";
 
 import Button from "@/components/ui/Button";
-import Input from "@/components/ui/Input";
-import { InputFotos } from "@/components/ui/InputFotos";
-import Required from "@/components/ui/Required";
+import Input from "@/components/ui/Inputs/Input";
+import { InputFotos } from "@/components/ui/Inputs/InputFotos";
+import TextArea from "@/components/ui/Inputs/TextArea";
+import Required from "@/components/ui/Inputs/Required";
 import { getIconByStatus } from "@/lib/utils/alerts";
 import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
@@ -63,11 +64,10 @@ export function FormAddReclamacao() {
         <label htmlFor="descricao">
           Descrição <Required/>
         </label>
-        <Input
+        <TextArea
           required
           id="descricao"
           name="descricao"
-          type="text"
           placeholder="Insira a descrição"
         />
 

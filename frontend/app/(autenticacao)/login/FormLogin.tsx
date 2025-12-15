@@ -5,9 +5,9 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Swal from "sweetalert2";
 import { getIconByStatus } from "@/lib/utils/alerts"
 import "@/public/css/form.css";
-import Required from "@/components/ui/Required";
+import Required from "@/components/ui/Inputs/Required";
 import { useAuth } from "@/context/AuthContext";
-import Input from "@/components/ui/Input";
+import Input from "@/components/ui/Inputs/Input";
 import Button from "@/components/ui/Button";
 
 

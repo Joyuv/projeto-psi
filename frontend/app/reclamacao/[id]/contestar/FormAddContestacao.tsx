@@ -1,7 +1,7 @@
 "use client";
 
-import { InputFotos } from "@/components/ui/InputFotos";
-import Required from "@/components/ui/Required";
+import { InputFotos } from "@/components/ui/Inputs/InputFotos";
+import Required from "@/components/ui/Inputs/Required";
 import { getIconByStatus } from "@/lib/utils/alerts";
 import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";

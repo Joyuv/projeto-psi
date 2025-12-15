@@ -2,12 +2,12 @@
 
 import "@/public/css/form.css";
 import cadastroAction from "./actions";
-import Required from "@/components/ui/Required";
+import Required from "@/components/ui/Inputs/Required";
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { getIconByStatus } from "@/lib/utils/alerts";
 import { useRouter } from "next/navigation";
-import Input from "@/components/ui/Input";
+import Input from "@/components/ui/Inputs/Input";
 import Button from "@/components/ui/Button";
 
 export default function CadastroForm() {
