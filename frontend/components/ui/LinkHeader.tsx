@@ -8,7 +8,7 @@ interface LinkHeaderProps {
 
 export default function LinkHeader({href, children}:LinkHeaderProps) {
   return(
-    <Link href={href} className="text-lg hover:text-green-800">
+    <Link href={href} className="text-lg hover:text-green-800 duration-200">
       {children}
     </Link>
   );

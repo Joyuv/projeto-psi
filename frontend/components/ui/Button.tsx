@@ -17,6 +17,8 @@ export default function Button({ children, onClick, disabled = false }: ButtonPr
       bg-green-500
       text-white 
       rounded-lg
+      hover:bg-green-800
+      duration-200
       "
     >
       {children}
