@@ -24,7 +24,7 @@ export default function ListaReclamacoes({
   }
 
   return (
-    <div className="flex justify-center items-center flx-row gap-3 mx-[20px] text-gray-600 py-10">
+    <div className="flex justify-center items-center flex-col gap-3 mx-[20px] text-gray-600 py-10">
       {reclamacoes.map((reclamacao) => (
         <div
           key={reclamacao.id}
