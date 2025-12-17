@@ -33,7 +33,7 @@ export default function ListaReclamacoes({
           <div className="flex flex-col">
             <div className="flex justify-between">
               <h3 className="text-xl font-bold">
-                {reclamacao.titulo} - {reclamacao.endereco}
+                {reclamacao.titulo} - Localização: {reclamacao.endereco ? reclamacao.endereco: "Não informada"}
               </h3>
             </div>
             <span>{reclamacao.descricao}</span>
