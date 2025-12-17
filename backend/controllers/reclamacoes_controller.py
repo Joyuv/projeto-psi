@@ -32,8 +32,8 @@ def resolver_reclamacao(reclamacao_id):
         return jsonify({"message": "Apenas o autor da reclamação pode resolve-la"}), 403
     if reclamacao.status == StatusReclamacao.RESOLVIDA:
         return jsonify({"message": "Esta reclamação já está resolvida"}), 400
-    if reclamacao.status == StatusReclamacao.CONTESTADA:
-        return jsonify({"message": "Não é possível resolver uma reclamação contestada"}), 400
+    # if reclamacao.status == StatusReclamacao.CONTESTADA:
+    #     return jsonify({"message": "Não é possível resolver uma reclamação contestada"}), 400
 
     try:
         reclamacao.status = StatusReclamacao.RESOLVIDA
