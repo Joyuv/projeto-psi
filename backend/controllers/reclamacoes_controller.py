@@ -39,7 +39,7 @@ def resolver_reclamacao(reclamacao_id):
         reclamacao.status = StatusReclamacao.RESOLVIDA
         reclamacao.data_resolucao = datetime.now(timezone.utc)
         db.session.commit()
-        return jsonify({"message": "Reclamação resolvida com sucesso"}), 200
+        return jsonify({"message": "Reclamação resolvida com sucesso", "reclamacao": reclamacao.to_dict()}), 200
     except Exception as e:
         db.session.rollback()
         return jsonify({"message": f"Erro ao resolver reclamação: {e}"}), 500
