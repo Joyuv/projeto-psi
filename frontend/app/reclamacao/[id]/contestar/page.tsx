@@ -1,7 +1,7 @@
 
 import "@/public/css/form.css";
 import { FormAddContestacao } from "./FormAddContestacao";
-import getReclamacao from "../actions";
+import { getReclamacao } from "../actions";
 import { notFound } from "next/navigation";
 import { PageReclamacaoProps } from "../props";
 

@@ -1,6 +1,6 @@
 import "@/public/css/form.css";
 import { notFound } from "next/navigation";
-import getReclamacao from "../actions";
+import { getReclamacao } from "../actions";
 import { FormAtualizarReclamacao } from "./FormAtualizarReclamacao";
 import DadosAtuaisReclamacao from "./DadosAtuaisReclamacao";
 import { PageReclamacaoProps } from "../props";

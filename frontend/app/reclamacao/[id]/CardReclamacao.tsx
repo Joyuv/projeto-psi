@@ -11,6 +11,7 @@ import Swal from "sweetalert2";
 import { getIconByStatus } from "@/lib/utils/alerts";
 import { useAuth } from "@/context/AuthContext";
 import { H1, H2 } from "@/components/ui/titles";
+import Link from "next/link";
 
 export default function CardReclamacao({
   reclamacaoInicial,
@@ -22,6 +23,16 @@ export default function CardReclamacao({
   const router = useRouter();
   const [reclamacao, setReclamacao] = useState<Reclamacao>(reclamacaoInicial);
   // const [statusReclamacao, setStatusReclamacao] = useState<StatusReclamacao>(reclamacao.status);
+
+  // derived permission booleans
+  const isAuthor = reclamacao.usuarioId === usuario?.id;
+  const isResolved = reclamacao.status === "Resolvida";
+  const isPending = reclamacao.status === "Pendente";
+
+  const canResolve = isAuthor && !isResolved;
+  const canEdit = isAuthor && isPending;
+  const canContest = !isPending;
+  const canViewContestations = !isPending;
 
   async function handleResolver(reclamacaoId: number) {
     const response = await fetch(`${apiUrl}/api/reclamacao/${reclamacaoId}/resolver`, {
@@ -91,7 +102,7 @@ export default function CardReclamacao({
                 Status: {reclamacao.status}
               </div>
               <div className="flex gap-2">
-                {reclamacao.status !== "Resolvida" && reclamacao.usuarioId === usuario?.id ? (
+                {canResolve && (
                   <Button
                     onClick={async () => {
                       await handleResolver(reclamacao.id);
@@ -99,10 +110,9 @@ export default function CardReclamacao({
                   >
                     Resolver reclamação
                   </Button>
-                ) : (
-                  <></>
                 )}
-                {reclamacao.status === "Pendente" ? (
+
+                {canEdit && (
                   <Button
                     onClick={() => {
                       router.push(`/reclamacao/${reclamacao.id}/atualizar`);
@@ -110,7 +120,9 @@ export default function CardReclamacao({
                   >
                     Editar reclamação
                   </Button>
-                ) : (
+                )}
+
+                {canContest && (
                   <Button
                     onClick={() => {
                       router.push(`/reclamacao/${reclamacao.id}/contestar`);
@@ -119,13 +131,16 @@ export default function CardReclamacao({
                     Contestar reclamação
                   </Button>
                 )}
-                <Button
-                  onClick={() => {
-                    router.push(`/contestacoes?idReclamacao=${reclamacao.id}`);
-                  }}
-                >
-                  Contestações
-                </Button>
+
+                {canViewContestations && (
+                  <Button
+                    onClick={() => {
+                      router.push(`/reclamacao/${reclamacao.id}/contestacoes`);
+                    }}
+                  >
+                    Ver Contestações
+                  </Button>
+                )}
               </div>
             </div>
           </ul>
