@@ -19,9 +19,9 @@ export default async function Page({ params }: PageReclamacaoProps) {
   const reclamacao = response.data.reclamacao;
 
   return(
-    <div className="flex align-center justify-center h-full gap-[20px]">
+    <div className="flex align-center justify-center h-full gap-[20px] px-6 py-6">
       <DadosAtuaisReclamacao reclamacao={reclamacao}/>
-      <FormAtualizarReclamacao reclamacaoId={reclamacaoId}/>
+      <FormAtualizarReclamacao reclamacao={reclamacao} reclamacaoId={reclamacaoId}/>
     </div>
   );
 }
