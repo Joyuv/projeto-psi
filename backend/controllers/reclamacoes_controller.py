@@ -29,17 +29,17 @@ def resolver_reclamacao(reclamacao_id):
 
     usuario_id = current_user.get_id()
     if usuario_id != reclamacao.usuario_id:
-        return jsonify({"message": "Apenas o autor da reclamação pode resolve-la"}), 401
+        return jsonify({"message": "Apenas o autor da reclamação pode resolve-la"}), 403
     if reclamacao.status == StatusReclamacao.RESOLVIDA:
         return jsonify({"message": "Esta reclamação já está resolvida"}), 400
-    if reclamacao.status == StatusReclamacao.CONTESTADA:
-        return jsonify({"message": "Não é possível resolver uma reclamação contestada"}), 400
+    # if reclamacao.status == StatusReclamacao.CONTESTADA:
+    #     return jsonify({"message": "Não é possível resolver uma reclamação contestada"}), 400
 
     try:
         reclamacao.status = StatusReclamacao.RESOLVIDA
         reclamacao.data_resolucao = datetime.now(timezone.utc)
         db.session.commit()
-        return jsonify({"message": "Reclamação resolvida com sucesso"}), 200
+        return jsonify({"message": "Reclamação resolvida com sucesso", "reclamacao": reclamacao.to_dict()}), 200
     except Exception as e:
         db.session.rollback()
         return jsonify({"message": f"Erro ao resolver reclamação: {e}"}), 500
@@ -51,7 +51,7 @@ def atualizar_reclamacao(reclamacao_id):
 
     usuario_id = current_user.get_id()
     if usuario_id != reclamacao.usuario_id:
-        return jsonify({"message": "Apenas o autor da reclamação pode atualizá-la"}), 401
+        return jsonify({"message": "Apenas o autor da reclamação pode atualizá-la"}), 403
 
     dados = request.form
     arquivos = request.files

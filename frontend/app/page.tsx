@@ -1,7 +1,11 @@
+import AdicionarReclamacaoSection from "@/components/ui/AdicionarReclamacaoSection";
+import ComoFuncionaSection from "@/components/ui/ComoFunciona/ComoFuncionaSection";
+
 export default function Home() {
   return (
-    <main className="flex justify-center align-center">
-      Explicação do site aqui
-    </main>
+    <>
+      <AdicionarReclamacaoSection/>
+      <ComoFuncionaSection />
+    </>
   );
 }
