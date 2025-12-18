@@ -14,11 +14,11 @@ export default function ListaReclamacoes({
   const router = useRouter();
 
   return (
-    <div className="flex justify-center items-center flex-col gap-3 mx-[20px] text-gray-600 py-10">
+    <div className="flex justify-center items-center flex-col gap-3 text-gray-600">
       {reclamacoes.map((reclamacao) => (
         <div
           key={reclamacao.id}
-          className="p-5 bg-white border-2 border-neutral-200 rounded-xl flex flex-col gap-2 w-10/12"
+          className="p-5 bg-white border-2 border-neutral-200 rounded-xl flex flex-col gap-2 w-full"
         >
           <div className="flex flex-col">
             <div className="flex justify-between">
