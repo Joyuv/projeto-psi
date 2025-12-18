@@ -5,6 +5,7 @@ interface ButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
   styles?: string;
+  type?: "submit" | "reset" | "button";
 }
 
 export default function Button({
@@ -12,19 +13,21 @@ export default function Button({
   onClick,
   disabled = false,
   styles,
+  type,
 }: ButtonProps) {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
+      type={type}
       className={`
+      rounded-lg
       p-2 px-5 
       bg-green-500
       text-white 
-      rounded-lg
       hover:bg-green-800
       duration-200
-      ${styles}
+       ${styles}
       `}
     >
       {children}
